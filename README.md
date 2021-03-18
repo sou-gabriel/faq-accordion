@@ -1,0 +1,1 @@
+![Accordion](./design/desktop-preview.jpg)
