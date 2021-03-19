@@ -39,6 +39,46 @@ body {
   );
 }
 
+.theme {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.theme__input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.theme__label {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  border-radius: 27px;
+  background-image: linear-gradient(to right, #f72585, #480ca8);
+  position: relative;
+  cursor: pointer;
+}
+
+.theme__label::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #edf2fb;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 500ms;
+}
+
+.theme__input:checked + .theme__label::after {
+  background-color: #14213da2;
+  left: calc(50% + 8px);
+}
+
 .card {
   height: 55.8rem;
   background-color: #fff;
