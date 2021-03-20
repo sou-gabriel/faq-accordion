@@ -199,6 +199,10 @@ body {
     top: 50%;
     z-index: 1;
     transform: translate(-49%, -25%);
+    animation-name: float;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
   }
 
   .card__image {
@@ -236,5 +240,19 @@ body {
   100% {
     margin-top: 0;
     opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    top: 50%;
+  }
+
+  50% {
+    top: 48%;
+  }
+
+  100% {
+    top: 50%;
   }
 }
