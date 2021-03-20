@@ -2,23 +2,27 @@ const body = document.body
 const accordion = document.querySelector('.accordion')
 const inputTheme = document.querySelector('.theme__input')
 
-accordion.addEventListener('click', event => {
+const handleClickButton = event => {
   const clickedElement = event.target
+  const isAButton = clickedElement.tagName === 'BUTTON'
 
-  if (clickedElement.tagName === 'BUTTON') {
-    const accordionItem = document.querySelector(`[data-item="${clickedElement.dataset.button}"]`)
+  if (isAButton) {
+    const buttonDataValue = clickedElement.dataset.button
+
+    const accordionItem = document
+      .querySelector(`[data-item="${buttonDataValue}"]`)
 
     accordionItem.classList.toggle('accordion__item--active')
   }
-})
+}
 
-inputTheme.addEventListener('input', (event) => {
+const handleChangeTheme = event => {
   const inputIsChecked = event.target.checked 
+  
+  inputIsChecked
+    ? body.classList.add('dark') 
+    : body.classList.remove('dark')
+}
 
-  if (inputIsChecked) {
-    body.classList.add('dark')
-    return
-  }
-
-  body.classList.remove('dark')
-})
+accordion.addEventListener('click', handleClickButton)
+inputTheme.addEventListener('input', handleChangeTheme)
