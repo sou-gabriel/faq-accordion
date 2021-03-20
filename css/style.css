@@ -87,6 +87,7 @@ body {
   padding: 11rem 2rem 4rem;
   position: relative;
   transition: background-color 250ms;
+  box-shadow: 0px 0px 50px 2px var(--text-blue);
 }
 
 .card__box {
@@ -141,7 +142,8 @@ body {
   transition: color 200ms;
 }
 
-.accordion__button:hover {
+.accordion__button:hover,
+.dark .accordion__button:hover {
   color: var(--text-red);
 }
 
