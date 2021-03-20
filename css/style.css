@@ -23,7 +23,7 @@ button {
 
 html,
 body {
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 html {
@@ -86,6 +86,7 @@ body {
   border-radius: 2rem;
   padding: 11rem 2rem 4rem;
   position: relative;
+  transition: background-color 250ms;
 }
 
 .card__box {
@@ -160,6 +161,17 @@ body {
   line-height: 1.5rem;
   color: var(--text-dark-blue);
   display: none;
+}
+
+/* Dark mode */
+.dark .card {
+  background-color: #0b090a;
+}
+
+.dark .card__title,
+.dark .accordion__button,
+.dark .accordion__content {
+  color: var(--light-blue);
 }
 
 @media (min-width: 920px) {
